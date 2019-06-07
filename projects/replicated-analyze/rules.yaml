@@ -8,7 +8,7 @@
   ]
   test:
     IsEmpty:
-      path: analyze
+      path: analyze.v1
   examples:
     wrong:
       - description: Spec has no `analyze`
@@ -17,14 +17,16 @@
       - description: Spec `analyze` is empty
         yaml: |
           ---
-          analyze: []
+          analyze:
+            v1: []
     right:
       - description: Spec has a `analyze` specified
         yaml: |
           ---
           analyze:
-          - name: processes.configmanagement.puppet
-            insight:
-              primary: Managed By Puppet
-              detail: This server is running a Puppet agent
-              severity: info
+            v1:
+            - name: processes.configmanagement.puppet
+              insight:
+                primary: Managed By Puppet
+                detail: This server is running a Puppet agent
+                severity: info

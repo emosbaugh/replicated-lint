@@ -21,7 +21,8 @@ By adding an `analyze` section, you can customize what kinds of insights to surf
 *Incorrect*: Spec `analyze` is empty
 
 ```yaml---
-analyze: []
+analyze:
+  v1: []
 
 ```
 
@@ -31,11 +32,12 @@ analyze: []
 
 ```yaml---
 analyze:
-- name: processes.configmanagement.puppet
-  insight:
-    primary: Managed By Puppet
-    detail: This server is running a Puppet agent
-    severity: info
+  v1:
+  - name: processes.configmanagement.puppet
+    insight:
+      primary: Managed By Puppet
+      detail: This server is running a Puppet agent
+      severity: info
 
 ```
 
@@ -44,5 +46,5 @@ analyze:
 
 
 
-*Generated at Fri Jun 07 2019 11:59:00 GMT-0700 (PDT)*
+*Generated at Fri Jun 07 2019 13:10:38 GMT-0700 (PDT)*
 
